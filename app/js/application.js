@@ -1,3 +1,19 @@
+$.fn.tabs = function(options) {
+  var self = this;
+  var container = this.find('> ul');
+  var lastIdx;
+  container.on('click', 'li > button:not(.active)', function() {
+    var that = $(this);
+    container.find('li > button').removeClass('active');
+    that.addClass('active');
+
+    var idx = that.parent().index();
+    var table = self.find('> table');
+    table.find('tr').hide()
+    table.find('tr:eq(' + idx + ')').show();
+  });
+};
+
 $(document).ready(function(){
   $('.slider-middle-owl').owlCarousel({
     loop:true,
@@ -19,7 +35,10 @@ $(document).ready(function(){
         items:3,
       }
     }
-  })
+  });
+
+  $('.js-tabs table tr').hide();
+  $('.js-tabs').tabs();
 });
 
 $(document).ready(function(){
