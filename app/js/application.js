@@ -41,7 +41,7 @@ $(document).ready(function(){
   $('.js-tabs').tabs();
 
   $('.advantages-a').click(function(ev) {
-    ev.preventDefault();
+    // ev.preventDefault();
     openSideBarBook();
   });
 });
@@ -83,34 +83,26 @@ $(document).ready(function(){
 });
 
 function openSideBarCall() {
-  var show = document.getElementById("popup-left-call");
-  show.setAttribute("style", "display: block");
-
+  $('#popup-left-call').fadeIn();
 }
 
 function closeSideBarCall() {
-  var hide = document.getElementById("popup-left-call");
-  hide.setAttribute("style", "display: none");
+  $('#popup-left-call').fadeOut();
 }
 
 function openSideBarBook() {
-  var show = document.getElementById("popup-left-book");
-  show.setAttribute("style", "display: block");
-
+  $('#popup-left-book').fadeIn();
 }
 
 function closeSideBarBook() {
-  var hide = document.getElementById("popup-left-book");
-  hide.setAttribute("style", "display: none");
+  $('#popup-left-book').fadeOut();
 }
 
 
 function closeServicesPopup() {
-  var hide = document.getElementById("services-popup-bg-overlay");
-  hide.setAttribute("style", "display: none");
+  $("#services-popup-bg-overlay").fadeOut();
 }
 
 function openServicesPopup() {
-  var hide = document.getElementById("services-popup-bg-overlay");
-  hide.setAttribute("style", "display: block");
+  $('#services-popup-bg-overlay').fadeIn();
 }
