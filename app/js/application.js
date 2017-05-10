@@ -1,7 +1,8 @@
+// Tabs plugins
 $.fn.tabs = function(options) {
   var self = this;
   var container = this.find('> ul');
-  var lastIdx;
+
   container.on('click', 'li > button:not(.active)', function() {
     var that = $(this);
     container.find('li > button').removeClass('active');
@@ -9,8 +10,8 @@ $.fn.tabs = function(options) {
 
     var idx = that.parent().index();
     var table = self.find('> table');
-    table.find('tr').hide()
-    table.find('tr:eq(' + idx + ')').show();
+    table.find('td').hide()
+    table.find('td:eq(' + idx + ')').show();
   });
 };
 
@@ -37,8 +38,12 @@ $(document).ready(function(){
     }
   });
 
-  $('.js-tabs table tr').hide();
   $('.js-tabs').tabs();
+
+  $('.advantages-a').click(function(ev) {
+    ev.preventDefault();
+    openSideBarBook();
+  });
 });
 
 $(document).ready(function(){
