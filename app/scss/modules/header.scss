@@ -1,0 +1,108 @@
+header  {
+
+  .header-top {
+    width: 100%;
+    padding: 23px 0 23px;
+    z-index: 100;
+    overflow: visible;
+    position: absolute;
+
+    @media only screen and (max-width: 990px) {
+      display: none;
+    }
+
+    .container {
+      @include container;
+      display: flex;
+      justify-content: space-between;
+
+      @media only screen and (max-width: 1090px) {
+        width: 90%;
+      }
+
+      // .header-element { letter-spacing: 1px; }
+
+      .location {
+        width: 25%;
+
+        img {
+          height: 62px;
+          width: 90%;
+        }
+      }
+
+      .work-day, .location, .mail {
+        @media only screen and (max-width: 1090px) {
+          display: none;
+        }
+      }
+
+      .logo, .work-day, .location, .mail {
+        width: 18.75%;
+
+        ul {
+          list-style: none;
+          padding: 0;
+          padding-left: 10%;
+
+          li {
+            padding-left: 30px;
+            line-height: 20px;
+
+            a {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .work-day{
+        ul li:first-child {
+          background: url(../images/contact-form-3.png) 0 50% no-repeat;
+        }
+      }
+
+      .location {
+        ul li:first-child {
+          background: url(../images/contact-form-1.png) 0 50% no-repeat;
+        }
+      }
+
+      .mail {
+        ul li:first-child {
+          background: url(../images/contact-form-4.png) 0 50% no-repeat;
+        }
+
+        a {
+          transition: .5s;
+
+          &:hover {
+            color: #50af31;
+            transition: .5s;
+          }
+        }
+      }
+
+      .phone {
+        img {
+          width: 16px;
+          height: 16px;
+        }
+
+        p {
+          margin-bottom: 5px;
+          font-family: UbuntuBold;
+        }
+
+        a {
+          background-color: transparent;
+          font-size: 12px;
+          color: #50af31;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

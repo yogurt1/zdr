@@ -1,0 +1,129 @@
+footer {
+  width: 100%;
+	padding: 40px 0 40px;
+  background: $color-white;
+
+  .container {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+
+
+    footer h4 {
+    	color: #50af31;
+    	font-size: 19px;
+    	text-transform: uppercase;
+    	margin: 0;
+    	font-family: UbuntuBold;
+    }
+
+    .footer-p {
+    	font-size: 10px;
+    	text-transform: uppercase;
+    	color: #a09f9f;
+    	line-height:  10px;
+    }
+
+    .footer-p-2 {
+    	color: #acacad;
+    	font-size: 14px;
+    }
+
+    .footer-p3 {
+    	font-size: 14px;
+
+    	img {
+    		margin-right: 12px;
+    		width: 16px;
+    		height: 20px;
+    	}
+
+      span {
+    		padding-left: 31px;
+    	}
+    }
+
+    .footer-button-2 img {
+    	width: 24px;
+    	height: 24px;
+      font-size: 10px;
+    }
+
+    .footer-logo {
+    	p {
+    		margin: 0;
+    	}
+
+      span {
+    		display: block;
+    	}
+    }
+
+    .footer-heart {
+    	img {
+    		width: 143px;
+    		height: 135px;
+    	}
+    }
+
+    .footer-button {
+    	background-color: transparent;
+    	box-shadow: none;
+    	border: none;
+    	padding: 0;
+    	color: #50af31;
+    	text-transform: uppercase;
+    	font-size: 12px;
+      border: 0;
+      outline: none;
+      cursor: pointer;
+    	font-family: UbuntuBold;
+    }
+
+    .footer-logo-p {
+    	width: 50%;
+    	height: 40px;
+    	float: left;
+    	line-height: 40px;
+      text-transform: capitalize;;
+    }
+
+    .footer-redline {
+    	margin-left: 10%;
+    	width: 66px;
+    	height: 33px;
+    	float: left;
+    }
+
+
+    .footer-first {
+    	width: 25%;
+    	margin-right: 5%;
+    	p {
+    		margin: 0;
+    		text-align: center;
+    		margin-top: -10px;
+    	}
+    }
+
+    .footer-second, .footer-third,  {
+    	width: 20%;
+    	margin-right: 7%
+    }
+
+    .footer-last {
+    	width: 20%;
+    	vertical-align: middle;
+    	a {
+    		display: inline-block;
+    	}
+    	p {
+    		text-align: center;
+    	}
+
+    	a, p {
+    		float: left;
+    	}
+    }
+  }
+}

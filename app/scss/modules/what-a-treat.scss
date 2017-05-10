@@ -1,0 +1,147 @@
+.services {
+  width: 100%;
+  padding-bottom: 50px;
+  background: $color-white;
+
+  .container {
+    @include container;
+
+    .services-img-wrapper {
+      padding: 0;
+      position: relative;
+      width: 24.9%;
+      margin-right: 0.1%;
+      margin-top: 1px;
+      float: left;
+
+      &:before {
+        @extend .before;
+        opacity: 0.2;
+      }
+
+      &:hover::before {
+        @extend .before;
+        background-color: white;
+        opacity: 0.001;
+        cursor: pointer;
+        height: 99%;
+      }
+
+      &:last-child {
+        width: 74.9%;
+      }
+    }
+
+    .services-inner-p {
+      font-size: 14px;
+      color: white;
+      text-transform: uppercase;
+      position: absolute;
+      bottom: 25px;
+      text-align: center;
+      font-family: UbuntuBold;
+      width: 100%;
+    }
+
+    .services-inner-h4 {
+      color: #50af31;
+      font-size: 67px;
+      font-family: UbuntuBold;
+      width: 60%;
+      position: absolute;
+      top: 5%;
+      left: 4%;
+      margin: 0;
+    }
+
+    .services-inner-last-p {
+      font-size: 18px;
+      font-family: UbuntuBold;
+      float: right;
+      width: 63%;
+      margin: 0;
+      margin-top: 18px;
+    }
+
+    .services-inner-last-a {
+      width: 30%!important;
+      position: absolute!important;
+      bottom: 15%;
+      margin-top: -30px;
+      left: 5%;
+      transition: .5s;
+      cursor: pointer;
+      outline: none;
+      background-color: #50af31;
+      color: white;
+      position: relative;
+      width: 252px;
+      margin-right: 8.4%;
+      height: 50px;
+      border-radius: 35px;
+      font-size: 12px !important;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: 0;
+
+      .green-button {
+        padding: 0;
+      }
+
+      &:hover {
+        background: $color-white;
+        color: #50af31;
+        border: 2px solid #50af31;
+        transition: .5s;
+      }
+    }
+
+    .services-inner-logo {
+      position: absolute;
+      bottom: 0;
+      margin-top: -30px;
+      right: 0;
+      width: 100px!important;
+    }
+
+    .services-img-border-wrapper {
+      width: 49.9%;
+      p {
+        bottom: 55px;
+        margin-bottom: 0;
+      }
+
+      .services-inner-a {
+        font-family: UbuntuBold;
+        text-transform: uppercase;
+        font-size: 12px;
+        background-color: #50af31;
+        color: white;
+        height: 26px;
+        line-height: 20px;
+        width: 184px;
+        margin-bottom: 20px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: inline-block;
+        text-align: center;
+        border: 0;
+        border-radius: 35px;
+        transition: .5s;
+        outline: none;
+        cursor: pointer;
+
+        &:hover {
+          color: #50af31;
+          background-color: white;
+          text-decoration: none;
+          transition: .5s;
+        }
+      }
+    }
+  }
+}

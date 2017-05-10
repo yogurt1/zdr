@@ -1,0 +1,541 @@
+/* -----------------------------------------------------------------------
+Version: 0.1
+
+SMACSS [Scalable Modular Architecture for CSS]
+Reference: http://smacss.com/
+
+Categorizing:
+1. Base  - Defaults elements, attribute selectors, pseudo-class selectors styling [example: body, form, a]
+2. Layout  - Divide the page into sections [example: header, footer] [prefix: l-]
+3. Modules - Reusable, Modular parts of design [example: sidebar, popup] [prefix: module-]
+4. State - How our module or layouts look in particular state [example: expanded, active] [prefix: is-]
+5. Theme - Look and feel of subcomponent based on theme [example: dark, light] [prefix: theme-]
+6. Pages   - Page specific styles. [prefix: page-]
+----------------------------------------------------------------------- */
+
+/*-------------------------------------------------
+MASTER: IMPORTING STYLESHEETS
+-------------------------------------------------*/
+@import "reset";
+@import "variables";
+@import "mixins";
+@import "base";
+
+
+@import "modules/header";
+@import "modules/header-slider";
+@import "modules/for-patients";
+@import "modules/help-you";
+@import "modules/admission";
+@import "modules/discount";
+@import "modules/doctors";
+@import "modules/what-a-treat";
+@import "modules/footer";
+@import "modules/form";
+@import "modules/map";
+@import "modules/popups";
+@import "pages/page-landing";
+
+
+h2 {
+	font-family: UbuntuBold;
+	font-size: 30px;
+	margin-bottom: 20px;
+}
+
+
+
+
+img {
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	border: 0;
+	width: 100%;
+}
+
+.services, .round, .promo-actions-top {
+	overflow: hidden;
+}
+
+
+.owl-carousel {
+	clear: both;
+}
+// end common
+
+// #header
+.container-wrapper {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	width: 100%;
+	padding-top: 20px;
+}
+
+
+
+
+
+
+// #Footer
+// end footer
+
+
+// media queries
+@media screen and (max-width: 1599px) {
+// promo-actions
+	.promo-actions-bottom {
+		input {
+			&:first-child {
+				width: 30%;
+				margin-right: 4%;
+			}
+
+			&.input-phone {
+				width: 27%;
+				margin-right: 6%;
+			}
+		}
+
+		button {
+			width: 33%;
+		}
+	}
+// end promo actions
+
+// advantages
+	.advantages-a {
+		width: 51%;
+		margin-right: 10%;
+	}
+
+	.advantages-a-2 {
+		width: 39%;
+	}
+
+	.plus {
+		padding-left: 7.5%;
+	}
+
+	button.services-plus  {
+		width: 60%;
+	}
+// end advantages
+}
+
+@media screen and (max-width: 1499px) {
+	.promo-actions-top {
+		h2 {
+			font-size: 24px;
+		}
+
+		.big-green {
+			font-size: 78px;
+			margin-bottom: 30px;
+		}
+	}
+
+	.services-inner-last-p {
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 1439px) {
+	.green-button {
+		font-size: 11px;
+	}
+
+	.img-sign {
+		left: 70%;
+	}
+
+
+	.sevices-popup-item {
+		overflow: scroll;
+	}
+}
+
+
+@media screen and (max-width: 1279px)  {
+.header-slider-item::before {
+	top: 132px;
+}
+
+	.img-sign {
+		left: 80%;
+	}
+
+	.plus {
+		padding-left: 5%;
+	}
+
+
+
+	.advantages-a, .advantages-a-2 {
+		font-size: 9px;
+	}
+
+	.quote p::after {
+		bottom: -26px;
+	}
+
+	.contact-form {
+		background-position: 27% 53%;
+	}
+
+	.footer-button-2 {
+		font-size: 10px;
+	}
+
+	.footer-last {
+		p {
+			font-size: 8px
+		}
+
+		img {
+			width: 55px;
+		}
+	}
+
+	.popup-left-call, .popup-left-book {
+		width: 50%;
+	}
+
+	.header-top-2 ul li, .header-top-2 ul li a, .header-top-3 ul li, .header-top-3 ul li a, .header-top-4 ul li, .header-top-4 ul li a, .header-top-5 ul li, .header-top-5 ul li a, .header-top-5 p {
+		font-size: 12px;
+	}
+
+	.header-top-2 ul li:first-child, .header-top-4 ul li:first-child {
+		background-position: 0 0;
+	}
+
+	.owl-nav {
+		display: none;
+	}
+
+	.spi-left, .spi-right {
+		float: none;
+		width: 100%;
+	}
+
+	.services-plus {
+		width: 45%!important;
+		font-size: 14px;
+		margin-bottom: 30px;
+	}
+
+	.promo-actions-top {
+		h2 {
+			width: auto!important;
+			float: none;
+			text-align: center;
+		}
+	}
+
+}
+
+@media screen and (max-width: 1365px) {
+		.services-inner-last-p {
+		font-size: 14px;
+	}
+
+	.services-inner-h4 {
+		font-size: 40px;
+		p {
+			margin-top: 10px;
+			width: 70%;
+		}
+	}
+}
+
+@media screen and (max-width: 1000px)  {
+	.headings h2 {
+		width: auto;
+	}
+	.headings-left, .headings-right {
+		width: 100%;
+		float: none;
+	}
+
+	.headings-right {
+		width: 80%;
+		margin: 60px 10% 0;
+	}
+
+	.services-img-wrapper {
+		width: 49.9%;
+	}
+
+	.services-img-border-wrapper {
+		width: 99.9%;
+	}
+
+	.services-img-wrapper:last-child {
+		width: 99.9%;
+	}
+
+	.advantages-left, .advantages-right {
+		width: 100%;
+		float: none;
+	}
+
+	.advantages-right {
+		overflow: hidden;
+		padding-top: 0;
+		button {
+			text-align: center;
+			font-size: 14px;
+			padding: 0;
+		}
+	}
+
+	.round-inner {
+		width: 50%;
+		height: 220px;
+	}
+
+	.departments-left {
+		float: none;
+		width: 100%;
+	}
+
+	.ticks-inner {
+
+
+	}
+
+	.middle-carousel-item {
+		height: 300px;
+	}
+
+	.departments-tabs {
+		li {
+			width: 50%;
+			margin: 0;
+			text-align: center;
+			button {
+				font-size: 10px;
+			}
+		}
+	}
+
+	.departments-tabs-table td {
+		width: 100%;
+		display: inline-block;
+	}
+
+	.promo-actions-bottom {
+		input {
+			width: 100%!important;
+			margin-bottom: 10px;
+		}
+
+		button {
+			width: 100%;
+			font-size: 14px;
+		}
+	}
+
+	.contact-form {
+		background: none;
+	}
+
+	.contact-form-left, .contact-form-right {
+		width: 100%;
+		float: none;
+	}
+
+	.contact-form-right {
+		margin-top: 70px;
+	}
+
+	.footer-first, .footer-logo, .footer-last {
+		width: 45%;
+		margin: 0;
+		height: 70px;
+	}
+
+	.footer-second, .footer-last {
+		margin-left: 5%;
+	}
+
+	.header-top-2, .header-top-3, .header-top-4 {
+		display: none;
+	}
+
+	.header-top-5, .header-top-1 {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+
+	.header-top-1 {
+		img {
+			width: 50%;
+		}
+	}
+
+	.hsi-middle div {
+		width: 100%;
+	}
+
+	.hs-bottom .hname, .hs-bottom .hphone {
+		width: 80%!important;
+		margin-bottom: 10px;
+	}
+	.hs-bottom button {
+		width: 80%;
+		font-size: 14px;
+	}
+
+	.hs-bottom input {
+		margin-right: 20%;
+	}
+
+		.services-plus {
+		width: 45%!important;
+		font-size: 12px;
+		margin-bottom: 30px;
+	}
+
+	.services-inner-h4 {
+		width: 90%;
+		font-size: 40px;
+		p {
+			margin-top: 10px;
+			width: 80%;
+		}
+	}
+}
+
+
+@media screen and (max-width: 767px) {
+	.container {
+		width: 95%;
+		margin: 0 auto;
+	}
+
+	.img-sign {
+		display: none;
+	}
+
+	.services-img-wrapper {
+		width: 99.9%;
+	}
+
+	.advantages-a, .advantages-a-2 {
+		width: 100%;
+		margin: 0;
+		margin-top: 20px;
+		font-size: 11px!important;
+	}
+
+	.round-inner {
+		width: 100%;
+		margin-top: 20px;
+		height: auto;
+		text-align: center;
+		p {
+			margin-top: 20px;
+			width: 100%;
+		}
+	}
+
+	.ticks-inner {
+		width: 100%;
+	}
+
+	.departments-tabs {
+		li {
+			width: 100%;
+			margin: 0;
+			margin-bottom: 10px;
+			button {
+				font-size: 10px;
+			}
+		}
+	}
+
+	.slider-middle-h2, .quote {
+		float: none;
+		width: 100%;
+	}
+
+	.footer-first, .footer-logo, .footer-last {
+		width: 100%;
+		margin: 0;
+		height: auto;
+		margin-top: 20px;
+	}
+
+	.footer-logo {
+		text-align: center;
+		button {
+			display: inline-block;
+		}
+	}
+
+	.popup-left-call, .popup-left-book {
+		width: 90%;
+	}
+
+	.header-top-1 {
+		img {
+			width: 60%;
+		}
+	}
+
+	.owl-dots {
+		display: none;
+	}
+
+	.header-slider-item p, .hsi-middle, .hs-bottom {
+		width: 100%;
+	}
+
+	.hs-bottom .hphone, .hs-bottom .hname, .hs-bottom button {
+		width: 80%!important;
+		text-align: center;
+		margin-left: 10%;
+		margin-right: 10%;
+	}
+
+	.hs-bottom button {
+		font-size: 10px;
+	}
+
+	.services-popup-button {
+		width: 100%!important;
+	}
+
+	.services-plus {
+		width: 100%!important;
+		font-size: 12px;
+		margin-bottom: 30px;
+	}
+
+	.services-img-wrapper:last-child {
+		display: none;
+	}
+}
+
+@media screen  and (max-width: 320px) {
+	.popup-left-book {
+		h2 {
+			font-size: 18px;
+		}
+		input {
+			height: 20px;
+		}
+
+		img {
+			height: 47px;
+			width: 36px;
+		}
+
+	}
+
+}
+// end media queries

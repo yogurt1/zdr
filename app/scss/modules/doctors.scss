@@ -1,0 +1,137 @@
+.departments {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  .container {
+    @include container;
+
+    .departments-left {
+      float: left;
+      width: 50%;
+
+      p {
+        margin-bottom: 22px;
+      }
+    }
+
+    .departments-right {
+      padding-top: 0;
+      display: flex;
+
+      .plus, button {
+        text-align: center !important;
+        padding-left: 36px;
+        outline: none;
+        transition: .5s;
+        cursor: pointer;
+        border: 0;
+        width: 252px;
+        height: 50px;
+        border-radius: 25px;
+        background: #50af31;
+        display: inline-block;
+        margin-right: 4%;
+    		img {
+    			width: 24px!important;
+    			height: 24px!important;
+    		}
+      }
+    }
+
+    .ticks, .ticks-inner {
+      float: left;
+    }
+
+    .ticks-inner {
+      width: 50%;
+    }
+
+    .ticks img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .departments-tabs {
+      list-style: none;
+      overflow: hidden;
+      padding: 0;
+      width: 100%;
+      height: auto;
+      margin-bottom: 50px;
+
+      li {
+        float: left;
+        margin-right: 39px;
+        display: inline-block;
+        width: auto;
+        margin-top: 10px;
+        text-align: center;
+
+        button {
+          font-family: UbuntuBold;
+          font-size: 12px;
+          text-transform: uppercase;
+          display: inline-block;
+          height: 30px;
+          line-height: 30px;
+          width: 100%;
+          background-color: transparent;
+          border: 0;
+          transition: .5s;
+          cursor: pointer;
+          outline: none;
+          padding: 1px 20px 0px 20px;
+
+          &:hover {
+            color: white;
+            background-color: #50af31;
+            text-decoration: none;
+            border-radius: 35px;
+            transition: .5s;
+          }
+        }
+      }
+
+
+      .active {
+        color: white;
+        background-color: #50af31;
+        text-decoration: none;
+        border-radius: 35px;
+      }
+    }
+
+    .departments-tabs-table {
+      td {
+        border: none!important;
+        width: (100 / 3) * 1%;
+        padding-bottom: 50px;
+      }
+
+      td img, td p {
+        float: left;
+      }
+      td img {
+        border-radius:50%;
+        width: 80px;
+        height: 80px;
+        margin-right: 20px;
+      }
+      td p {
+        width: 50%;
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+
+      .date {
+        font-size: 14px;
+        color: #ab9da6;
+      }
+    }
+
+
+    .table-padding-top {
+      padding-top: 10px;
+    }
+  }
+}

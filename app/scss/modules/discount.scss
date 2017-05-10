@@ -1,0 +1,82 @@
+.promo-actions {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background: url(../images/promo-actions-bg.png) no-repeat center;
+  background-size: cover;
+
+  .promo-container {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .promo-actions-top {
+
+    h2 {
+      float: left;
+    }
+    h2:first-child {
+      width: 20%;
+      margin-right: 10%;
+    }
+
+    h2:last-child {
+      width: 70%;
+      font-size: 30px;
+    }
+  }
+
+
+  .big-green {
+    color: #50af31;
+    font-size: 95px;
+    margin-top: 0;
+    margin-bottom: 50px;
+  }
+
+  .input-name, .input-phone {
+    height: 50px;
+    line-height: 50px;
+    border-radius: 35px;
+    border: none;
+    padding: 0 21px;
+    outline: none;
+  }
+
+
+  .promo-actions-bottom {
+    display: flex;
+
+    input:first-child {
+      width: 240px;
+      margin-right: 30px;
+    }
+
+    input.input-phone {
+      width: 214px;
+      margin-right: 40px;
+    }
+    button {
+      width: 295px;
+      margin-right: 0;
+      outline: none;
+      border: 0;
+      transition: .5s;
+      cursor: pointer;
+      color: $color-white;
+      background: #50af31;
+      height: 50px;
+      border-radius: 35px;
+      border: none;
+      padding: 0 21px;
+      text-transform: uppercase;
+      font-weight: bold;
+
+      &:hover {
+        border: 2px solid #50af31;
+        color: #50af31;
+        background: transparent;
+        transition: .5s;
+      }
+    }
+  }
+}
