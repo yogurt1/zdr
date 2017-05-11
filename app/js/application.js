@@ -3,8 +3,7 @@ $.fn.tabs = function(options) {
   var self = this;
   var container = this.find('> ul');
 
-  container.on('click', 'li > button:not(.active)', function() {
-    var that = $(this);
+  function onClick(that) {
     container.find('li > button').removeClass('active');
     that.addClass('active');
 
@@ -12,6 +11,12 @@ $.fn.tabs = function(options) {
     var table = self.find('> table');
     table.find('td').hide()
     table.find('td:eq(' + idx + ')').show();
+  }
+
+  onClick(container.find('li > button.active'));
+
+  container.on('click', 'li > button:not(.active)', function() {
+    onClick($(this));
   });
 };
 
